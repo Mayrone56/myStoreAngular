@@ -35,6 +35,7 @@ export class CartComponent {
   onSubmit(): void {
     // Traitement des données du formulaire lors du passage à la caisse
     this.items = this.cartService.clearCart(); // Appelle la méthode clearCart() du service pour vider le panier et met à jour la liste des articles
+    window.alert('Your order has been submitted');
     console.warn('Your order has been submitted', this.checkoutForm.value); // Affiche un message dans la console avec les données du formulaire
     this.checkoutForm.reset(); // Réinitialise le formulaire après la soumission
   }
