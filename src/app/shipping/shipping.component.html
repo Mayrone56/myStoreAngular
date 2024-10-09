@@ -1,0 +1,17 @@
+<!-- Titre du composant -->
+<p>SHIPPING COMPONENT</p>
+
+<!-- Sous-titre pour indiquer la section des prix d'expédition -->
+<h3>Shipping Prices</h3>
+
+<!-- Utilisation de la directive *ngFor pour itérer sur chaque élément dans shippingCosts. -->
+<!-- | async : C'est un pipe qui permet de souscrire à un Observable (dans ce cas, shippingCosts). -->
+<!-- Il récupère automatiquement la dernière valeur émise par l'Observable et maj la vue lorsque la valeur change. Cela simplifie le travail avec les données asynchrones, car il gère automatiquement l'abonnement et la désinscription à l'Observable. -->
+
+<!-- let shipping of shippingCosts | async : Cela signifie que pour chaque élément dans shippingCosts, une variable locale nommée shipping est créée, représentant un élément individuel du tableau. -->
+<div class="shipping-item" *ngFor="let shipping of shippingCosts | async">
+  <!-- Affichage du type de livraison -->
+  <span>{{ shipping.type }}</span>
+  <!-- Affichage du prix de livraison, formaté comme une devise en euros (EUR) -->
+  <span>{{ shipping.price | currency : "EUR" }}</span>
+</div>

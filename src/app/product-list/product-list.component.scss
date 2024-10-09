@@ -1,0 +1,15 @@
+.productCard {
+  //   height: 150px;
+  min-width: 30vw;
+  background-color: rgb(228, 228, 228);
+  padding: 16px;
+  border-radius: 20px;
+}
+
+.containerList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+}
